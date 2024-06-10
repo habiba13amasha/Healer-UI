@@ -1,0 +1,104 @@
+body{
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1EA384;
+  color: #fff;
+  padding: 5px 5px;
+  margin: 0px ;
+  border-radius: 2px;
+ 
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+ 
+}
+.navbar-logo a{
+  color: #000; /* تغيير لون الروابط إلى الأسود */
+  text-decoration:none ; /* إزالة الخط الأسفلي */ 
+}
+.navbar-menu-icon {
+  display: none; /* يتم إخفاء الايقونة في الشاشات الكبيرة */
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-right: 20px;
+ 
+}
+.navbar-links li a {
+  color: #000; /* تغيير لون الروابط إلى الأسود */
+  text-decoration:none ; /* إزالة الخط الأسفلي */
+}
+
+
+.navbar-links li a:hover {
+   color: #47ff04;
+}
+.navbar-languages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+}
+.navbar-languages select {
+  margin:1px;
+  border-radius: 2px;
+  
+}
+
+.navbar-buttons {
+  display: flex;
+  margin-left:10px;
+}
+
+/* تعديلات للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+  
+
+  .navbar-menu-icon {
+    display: block; /* يتم عرض الايقونة في الشاشات الصغيرة */
+    order: 3; /* ترتيب ظهور الايقونة*/
+    margin-left: 5px;
+  }
+
+  .navbar-links {
+    display: none; /* يتم إخفاء الروابط في الشاشات الصغيرة بشكل افتراضي */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1EA384;
+    width: 100%;
+    padding: 10px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links.open {
+    display: flex; /* يتم عرض الروابط عندما يتم الضغط على الأيقونة */
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-languages  {
+    display: none;
+  }
+  .navbar-imgLogo{
+    display: none;
+  }
+  
+}
